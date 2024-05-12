@@ -9,6 +9,6 @@
             @endforeach
         @endif
         <input type="submit" value="update"/>
-        <input type="button" value="back" onclick="location.href='{{rout('index')}}'"/>
+        <input type="button" value="back" onclick="location.href='{{route('index')}}'"/>
     </form>
 @endsection
