@@ -3,15 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Models\Memo;
+use App\Models\Memo as Memo;
 
 class MainController
 {
     // 웹 최초 진입시 처리 로직.
     public function index() {
-        // $memos = Memo::orderBy('created_at', 'desc')->get();
-        // return view('index', ['memos' => $memos]);
-        return view('index');
+        $memos = Memo::orderBy('created_at', 'desc')->get();
+        return view('index', ['memos' => $memos]);
     }
 
     // create 요청
