@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
     <form method="POST" action="{{ route('update',['id' => $memo->id]) }}">
-    @crsf
+        @csrf
         <textarea name="content" rows="4">{{ $memo->content}}</textarea>
         @if($errors->any())
             @foreach($errors->all() as $error)
